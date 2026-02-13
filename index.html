@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Rita | Digital Marketing Strategist & Growth Expert</title>
+
+    <meta name="description" content="Digital Marketing Strategist specializing in SEO, PPC, Social Media Marketing, and comprehensive digital growth strategies.">
+    <meta name="keywords" content="Digital Marketing, SEO, PPC, Social Media Marketing, Content Marketing, Email Marketing, Lead Generation">
+    <meta name="author" content="Candy Rita">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        :root {
+            --primary: #ec4899;
+            --primary-dark: #db2777;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
+            --bg-dark: #020617;
+            --card-bg: rgba(30, 41, 59, 0.6);
+            --card-hover: rgba(30, 41, 59, 0.9);
+            --border: rgba(255, 255, 255, 0.1);
+            --border-hover: rgba(236, 72, 153, 0.5);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --text-muted: #64748b;
+            --whatsapp: #25D366;
+            --linkedin: #0077b5;
+            --instagram: #E4405F;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 50px -12px rgba(0, 0, 0, 0.5);
+            --gradient-primary: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced Animated Background */
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+            animation: meshPulse 20s ease infinite alternate;
+        }
+
+        .mesh-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(2, 6, 23, 0.8) 100%);
+        }
+
+        @keyframes meshPulse {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            100% { transform: scale(1.15) rotate(5deg); opacity: 1; }
+        }
+
+        /* Floating particles effect */
+        .particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-100vh) translateX(100px); }
+            50% { transform: translateY(-200vh) translateX(-50px); }
+            75% { transform: translateY(-300vh) translateX(50px); }
+        }
+
+        /* Enhanced Navigation */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(2, 6, 23, 0.85);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 8%;
+            box-shadow: var(--shadow-lg);
+            background: rgba(2, 6, 23, 0.95);
+        }
+
+        nav .logo { 
+            font-weight: 800; 
+            font-size: 1.5rem; 
+            letter-spacing: -1px; 
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: transform 0.3s ease;
+        }
+
+        nav .logo:hover { transform: scale(1.05); }
+
+        nav .nav-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        nav .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--primary);
+            background: rgba(236, 72, 153, 0.1);
+        }
+
+        nav .nav-links a:hover::before { width: 60%; }
+
+        /* Enhanced Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 10% 80px 10%;
+            gap: 5rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: heroGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes heroGlow {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-content { 
+            flex: 1; 
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-image { 
+            flex: 1; 
+            position: relative; 
+            display: flex; 
+            justify-content: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .hero-image img {
+            width: 380px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            border: 5px solid transparent;
+            background: var(--gradient-primary);
+            background-clip: padding-box;
+            padding: 5px;
+            animation: morph 10s ease-in-out infinite, float-gentle 6s ease-in-out infinite;
+            box-shadow: 0 25px 60px -15px rgba(236, 72, 153, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 50% 50% 30% 70% / 30% 60% 70% 40%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+            75% { border-radius: 30% 60% 70% 40% / 50% 30% 60% 50%; }
+        }
+
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .tagline {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.15);
+            color: var(--primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            text-transform: uppercase;
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(236, 72, 153, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.4); }
+        }
+
+        h1 { 
+            font-size: 4.5rem; 
+            font-weight: 800; 
+            line-height: 1.1; 
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-desc { 
+            font-size: 1.25rem; 
+            color: var(--text-dim); 
+            margin-bottom: 2.5rem; 
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Enhanced Section Styling */
+        .section { 
+            padding: 120px 10%; 
+            opacity: 0; 
+            transform: translateY(50px); 
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .section.visible { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        .section-header { 
+            text-align: center; 
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .section-header h2 { 
+            font-size: 3rem; 
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* Enhanced About Features */
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Enhanced Card System */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px) saturate(180%);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            transition: transform 0.6s ease;
+            z-index: 0;
+        }
+
+        .card:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: var(--border-hover);
+            background: var(--card-hover);
+            box-shadow: 0 30px 60px -15px rgba(236, 72, 153, 0.3);
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 20px; 
+            margin-bottom: 1.5rem;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card i { 
+            font-size: 3rem; 
+            color: var(--primary); 
+            margin-bottom: 1.5rem; 
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover i {
+            transform: scale(1.1) rotate(5deg);
+            color: var(--accent);
+        }
+
+        .card h3 { 
+            margin-bottom: 1rem; 
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .card p { 
+            color: var(--text-dim); 
+            flex-grow: 1;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Service Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Enhanced Filter Buttons */
+        .filters { 
+            display: flex; 
+            justify-content: center; 
+            gap: 1rem; 
+            margin-bottom: 4rem; 
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            background: transparent;
+            color: var(--text-dim);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 50px;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+
+        .filter-btn.active::before,
+        .filter-btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .filter-btn.active, 
+        .filter-btn:hover { 
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.4);
+        }
+
+        /* Enhanced Modal */
+        .modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(2, 6, 23, 0.97);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            max-width: 900px;
+            padding: 3.5rem;
+            border-radius: 32px;
+            border: 2px solid var(--primary);
+            position: relative;
+            box-shadow: 0 30px 90px -20px rgba(236, 72, 153, 0.5);
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal { 
+            position: absolute; 
+            top: 1.5rem; 
+            right: 2rem; 
+            cursor: pointer; 
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        /* Enhanced Grid */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 2.5rem;
+        }
+
+        /* Enhanced Buttons */
+        .btn {
+            padding: 1.1rem 2.5rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary { 
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px -10px rgba(236, 72, 153, 0.6);
+        }
+
+        .btn-outline { 
+            border: 2px solid var(--primary); 
+            color: var(--primary); 
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px -10px rgba(236, 72, 153, 0.4);
+        }
+
+        .btn-full { 
+            width: 100%; 
+            margin-top: 1.5rem;
+        }
+
+        /* Social Brand Buttons */
+        .btn-whatsapp { 
+            background: var(--whatsapp); 
+            color: white;
+            box-shadow: 0 10px 30px -10px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-linkedin { 
+            background: var(--linkedin); 
+            color: white;
+            box-shadow: 0 10px 30px -10px rgba(0, 119, 181, 0.4);
+        }
+
+        .btn-instagram { 
+            background: var(--instagram); 
+            color: white;
+            box-shadow: 0 10px 30px -10px rgba(228, 64, 95, 0.4);
+        }
+
+        .btn-whatsapp:hover, 
+        .btn-linkedin:hover, 
+        .btn-instagram:hover { 
+            filter: brightness(1.15);
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        /* Contact Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-main);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: rgba(30, 41, 59, 0.5);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 1rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(30, 41, 59, 0.8);
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-status {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 12px;
+            display: none;
+            font-weight: 600;
+        }
+
+        .form-status.success {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+        }
+
+        .form-status.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+
+        /* Stagger animation for cards */
+        .grid .card,
+        .services-grid .card {
+            animation: fadeInUpStagger 0.8s ease-out backwards;
+        }
+
+        .grid .card:nth-child(1),
+        .services-grid .card:nth-child(1) { animation-delay: 0.1s; }
+        .grid .card:nth-child(2),
+        .services-grid .card:nth-child(2) { animation-delay: 0.2s; }
+        .grid .card:nth-child(3),
+        .services-grid .card:nth-child(3) { animation-delay: 0.3s; }
+        .grid .card:nth-child(4),
+        .services-grid .card:nth-child(4) { animation-delay: 0.4s; }
+        .grid .card:nth-child(5),
+        .services-grid .card:nth-child(5) { animation-delay: 0.5s; }
+        .grid .card:nth-child(6),
+        .services-grid .card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUpStagger {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer Enhancement */
+        footer {
+            padding: 5rem 10%;
+            text-align: center;
+            color: var(--text-dim);
+            border-top: 1px solid var(--border);
+            background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.5) 100%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero { 
+                flex-direction: column-reverse; 
+                text-align: center; 
+                padding-top: 150px;
+                gap: 3rem;
+            }
+            
+            h1 { font-size: 3rem; }
+            .hero h2 { font-size: 1.5rem; }
+            .hero-desc { font-size: 1.1rem; margin: 0 auto 2rem; }
+            .hero-btns { justify-content: center; }
+            .about-features { grid-template-columns: 1fr; }
+            nav .nav-links { display: none; }
+            .section { padding: 80px 5%; }
+            .section-header h2 { font-size: 2.2rem; }
+            .hero-image img { width: 280px; height: 280px; }
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .btn { padding: 0.9rem 1.8rem; font-size: 0.9rem; }
+            .modal-box { padding: 2rem; }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            z-index: 10000;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="mesh-bg"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <nav id="mainNav">
+        <div class="logo">CANDY RITA</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Portfolio</a>
+            <a href="#github-repos">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tagline">Digital Marketing Expert</span>
+            <h1>Candy Rita</h1>
+            <h2>Digital Marketing Strategist & Growth Expert</h2>
+            <p class="hero-desc">
+                Transforming businesses through data-driven marketing strategies. I specialize in SEO, PPC, social media marketing, and comprehensive digital growth solutions that drive measurable results and ROI.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="ph ph-rocket-launch"></i>
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="ph ph-chat-centered-dots"></i>
+                    Let's Talk Growth
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="profile.png" alt="Candy Rita">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2>Marketing That Delivers Results</h2>
+            <p>With a proven track record in digital marketing, I help businesses scale their online presence, generate quality leads, and maximize their marketing ROI through strategic planning and execution.</p>
+        </div>
+        <div class="about-features">
+            <div class="card" style="text-align: center;">
+                <img src="https://via.placeholder.com/400x200/1e293b/94a3b8?text=Data-Driven+Strategy" alt="Data-Driven" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%231e293b%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22Arial%22 font-size=%2218%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EData-Driven Strategy%3C/text%3E%3C/svg%3E'">
+                <h3>Data-Driven Strategy</h3>
+                <p>Every campaign is backed by analytics and insights, ensuring measurable results and continuous optimization.</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <img src="https://via.placeholder.com/400x200/1e293b/94a3b8?text=ROI+Focused" alt="ROI Focused" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%231e293b%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22Arial%22 font-size=%2218%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EROI Focused%3C/text%3E%3C/svg%3E'">
+                <h3>ROI-Focused Approach</h3>
+                <p>Maximizing return on investment through strategic budget allocation and performance tracking across all channels.</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <img src="https://via.placeholder.com/400x200/1e293b/94a3b8?text=Full-Service+Marketing" alt="Full-Service" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%231e293b%22 width=%22400%22 height=%22200%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22Arial%22 font-size=%2218%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EFull-Service Marketing%3C/text%3E%3C/svg%3E'">
+                <h3>Full-Service Marketing</h3>
+                <p>From strategy to execution, I provide end-to-end marketing solutions tailored to your business goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="section-header">
+            <h2>Marketing Services</h2>
+            <p>Comprehensive digital marketing solutions to grow your business</p>
+        </div>
+        <div class="services-grid">
+            <div class="card">
+                <i class="ph ph-magnifying-glass"></i>
+                <h3>SEO Services</h3>
+                <p>Technical SEO, On-Page optimization, Off-Page link building, and Local SEO to boost your search rankings.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-megaphone"></i>
+                <h3>Paid Advertising (PPC)</h3>
+                <p>Strategic paid campaigns on Google Ads, Facebook, Instagram, and LinkedIn for maximum ROI.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-instagram-logo"></i>
+                <h3>Social Media Marketing</h3>
+                <p>Comprehensive social media management, content creation, and community engagement strategies.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-article"></i>
+                <h3>Content Marketing</h3>
+                <p>Strategic content creation, blog management, and storytelling that resonates with your audience.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-envelope-simple"></i>
+                <h3>Email Marketing</h3>
+                <p>Targeted email campaigns, automation workflows, and newsletter management for customer retention.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-chart-line"></i>
+                <h3>Analytics & Tracking</h3>
+                <p>Comprehensive data analysis, conversion tracking, and performance reporting with actionable insights.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-monitor"></i>
+                <h3>Website Optimization</h3>
+                <p>CRO, A/B testing, and UX improvements to maximize conversions and user engagement.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-target"></i>
+                <h3>Lead Generation</h3>
+                <p>Strategic campaigns designed to capture, nurture, and convert high-quality leads for your business.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-shopping-cart"></i>
+                <h3>E-commerce Marketing</h3>
+                <p>Specialized strategies for online stores including product ads, retargeting, and conversion optimization.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-lightbulb"></i>
+                <h3>Marketing Strategy</h3>
+                <p>Comprehensive marketing planning, competitive analysis, and strategic consulting for business growth.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-paint-brush"></i>
+                <h3>Graphic Design</h3>
+                <p>Professional marketing collateral, social media graphics, and visual content that captures attention.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-trophy"></i>
+                <h3>Branding & Positioning</h3>
+                <p>Brand strategy development, positioning, and identity creation to stand out in your market.</p>
+            </div>
+            <div class="card">
+                <i class="ph ph-clipboard-text"></i>
+                <h3>SEO Audit</h3>
+                <p>Comprehensive website audits identifying technical issues, content gaps, and opportunities for improvement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-header">
+            <h2>Success Stories</h2>
+            <p>Real results from real campaigns - See how I've helped businesses grow</p>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProjects('all')">
+                <i class="ph ph-stack"></i>
+                All Projects
+            </button>
+            <button class="filter-btn" onclick="filterProjects('seo')">
+                <i class="ph ph-magnifying-glass"></i>
+                SEO
+            </button>
+            <button class="filter-btn" onclick="filterProjects('ppc')">
+                <i class="ph ph-megaphone"></i>
+                Paid Ads
+            </button>
+            <button class="filter-btn" onclick="filterProjects('social')">
+                <i class="ph ph-instagram-logo"></i>
+                Social Media
+            </button>
+        </div>
+
+        <div class="grid" id="projectGrid">
+            <div class="card seo">
+                <i class="ph ph-trending-up" style="color: #22c55e;"></i>
+                <h3>E-Commerce SEO Campaign</h3>
+                <p>Increased organic traffic by 285% and revenue by 180% through comprehensive SEO strategy for an online retail store.</p>
+                <button class="btn btn-outline btn-full" onclick="openModal('E-Commerce SEO Success', 'Implemented technical SEO improvements, optimized 500+ product pages, built authoritative backlinks, and created content strategy. Results: 285% increase in organic traffic, 180% revenue growth, and top 3 rankings for 50+ keywords within 6 months.')">
+                    <i class="ph ph-arrow-right"></i>
+                    View Case Study
+                </button>
+            </div>
+
+            <div class="card ppc">
+                <i class="ph ph-currency-dollar" style="color: #3b82f6;"></i>
+                <h3>PPC Campaign - SaaS Company</h3>
+                <p>Generated 450+ qualified leads with 40% reduction in cost-per-acquisition through optimized Google Ads campaigns.</p>
+                <button class="btn btn-outline btn-full" onclick="openModal('SaaS PPC Success', 'Restructured Google Ads account, implemented conversion tracking, created compelling ad copy, and optimized landing pages. Results: 450+ qualified leads, 40% lower CPA, and 5.2 ROAS.')">
+                    <i class="ph ph-arrow-right"></i>
+                    View Case Study
+                </button>
+            </div>
+
+            <div class="card social">
+                <i class="ph ph-users-three" style="color: #ec4899;"></i>
+                <h3>Social Media Growth Campaign</h3>
+                <p>Grew Instagram following from 2K to 45K+ with 8% engagement rate and consistent brand partnerships.</p>
+                <button class="btn btn-outline btn-full" onclick="openModal('Social Media Success', 'Developed content strategy, created engaging posts, ran targeted ad campaigns, and built community engagement. Results: 2,250% follower growth, 8% engagement rate, and 12 brand partnership deals.')">
+                    <i class="ph ph-arrow-right"></i>
+                    View Case Study
+                </button>
+            </div>
+
+            <div class="card seo ppc">
+                <i class="ph ph-storefront" style="color: #8b5cf6;"></i>
+                <h3>Local Business Marketing</h3>
+                <p>Helped local restaurant increase foot traffic by 165% through local SEO and targeted Facebook ads.</p>
+                <button class="btn btn-outline btn-full" onclick="openModal('Local Business Success', 'Optimized Google Business Profile, built local citations, managed reviews, and ran geo-targeted ads. Results: 165% increase in foot traffic, #1 local ranking, and 4.8★ review rating.')">
+                    <i class="ph ph-arrow-right"></i>
+                    View Case Study
+                </button>
+            </div>
+
+            <div class="card ppc social">
+                <i class="ph ph-rocket-launch" style="color: #f59e0b;"></i>
+                <h3>Product Launch Campaign</h3>
+                <p>Generated $250K in sales during first month launch through integrated social media and PPC strategy.</p>
+                <button class="btn btn-outline btn-full" onclick="openModal('Product Launch Success', 'Created pre-launch buzz, coordinated influencer partnerships, ran multi-platform ad campaigns, and built email list. Results: $250K first-month sales, 5,000+ email subscribers, and 85% sell-out rate.')">
+                    <i class="ph ph-arrow-right"></i>
+                    View Case Study
+                </button>
+            </div>
+
+            <div class="card seo">
+                <i class="ph ph-briefcase" style="color: #06b6d4;"></i>
+                <h3>B2B Lead Generation</h3>
+                <p>Delivered 120+ qualified B2B leads per month through content marketing and LinkedIn campaigns.</p>
+                <button class="btn btn-outline btn-full" onclick="openModal('B2B Lead Gen Success', 'Developed thought leadership content, optimized LinkedIn profile, ran targeted InMail campaigns, and created lead magnets. Results: 120+ monthly qualified leads, 35% conversion rate, and $1.2M pipeline generated.')">
+                    <i class="ph ph-arrow-right"></i>
+                    View Case Study
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="github-repos" class="section">
+        <div class="section-header">
+            <h2>GitHub Projects</h2>
+            <p>Explore my open-source contributions and code repositories</p>
+        </div>
+        <div class="grid" id="repoList">
+            <!-- Repos will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2>Let's Grow Your Business</h2>
+            <p>Ready to take your marketing to the next level?</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="card" style="padding: 3rem;">
+                <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.8rem;">Send a Message</h3>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell me about your marketing goals..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                        Send Message
+                    </button>
+
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+
+            <div class="card" style="text-align: center; max-width: 900px; margin: 3rem auto 0; padding: 3rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Connect with Me</h3>
+                <p class="hero-desc" style="margin: 0 auto 2.5rem auto;">Let's discuss how I can help grow your business through strategic digital marketing</p>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+                    <a href="https://wa.me/254704097451" class="btn btn-whatsapp" target="_blank">
+                        <i class="ph ph-whatsapp-logo"></i> WhatsApp
+                    </a>
+                    <a href="https://www.linkedin.com/in/candy-rita-908619b2" class="btn btn-linkedin" target="_blank">
+                        <i class="ph ph-linkedin-logo"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Candyrita" class="btn btn-instagram" target="_blank" style="background: #24292e; box-shadow: 0 10px 30px -10px rgba(36, 41, 46, 0.4);">
+                        <i class="ph ph-github-logo"></i> GitHub
+                    </a>
+                    <a href="mailto:candyrita25@gmail.com" class="btn btn-primary">
+                        <i class="ph ph-envelope"></i> Email Me
+                    </a>
+                </div>
+
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                    <p style="color: var(--text-dim); margin-bottom: 0.5rem;"><i class="ph ph-envelope" style="margin-right: 0.5rem;"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e0d0f000a171c071a0f5c5b2e09030f0702400d0103">[email&#160;protected]</a></p>
+                    <p style="color: var(--text-dim); margin-bottom: 0.5rem;"><i class="ph ph-phone" style="margin-right: 0.5rem;"></i> +254 704 097 451</p>
+                    <p style="color: var(--text-dim);"><i class="ph ph-map-pin" style="margin-right: 0.5rem;"></i> Nairobi, Kenya | Remote Worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="projectModal">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closeModal()"><i class="ph ph-x"></i></span>
+            <h2 id="mTitle" style="color: var(--primary); margin-bottom: 1.5rem; font-size: 2rem;">Project Title</h2>
+            <p id="mDesc" style="color: var(--text-dim); font-size: 1.15rem; line-height: 1.8; margin-bottom: 2.5rem;">Full project description goes here.</p>
+            <a href="#contact" class="btn btn-primary" style="display: inline-flex;" onclick="closeModal()">
+                <i class="ph ph-chat-centered-dots"></i>
+                Discuss Your Project
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">© 2026 Candy Rita</p>
+        <p style="color: var(--text-muted);">Digital Marketing Strategist • Driving Growth Through Data-Driven Marketing</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Create floating particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 15; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Scroll Reveal Animation
+        const observerOptions = { 
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => observer.observe(section));
+
+        // Project Filtering
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('#projectGrid .card');
+            const btns = document.querySelectorAll('.filter-btn');
+            
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.closest('.filter-btn').classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Modal Logic
+        function openModal(title, desc) {
+            document.getElementById('mTitle').innerText = title;
+            document.getElementById('mDesc').innerText = desc;
+            document.getElementById('projectModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('projectModal')) closeModal();
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formStatus = document.getElementById('formStatus');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="ph ph-circle-notch" style="animation: spin 1s linear infinite;"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Using FormSubmit.co service to send email
+            fetch('https://formsubmit.co/ajax/candyrita25@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                formStatus.className = 'form-status success';
+                formStatus.style.display = 'block';
+                formStatus.innerHTML = '<i class="ph ph-check-circle" style="margin-right: 0.5rem;"></i>Message sent successfully! I\'ll get back to you soon.';
+                this.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+                formStatus.innerHTML = '<i class="ph ph-x-circle" style="margin-right: 0.5rem;"></i>Oops! Something went wrong. Please try again or email me directly.';
+                
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+
+        // Add spin animation for loading icon
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Fetch GitHub Repos
+        fetch('https://api.github.com/users/Candyrita/repos?sort=updated&per_page=6')
+            .then(res => res.json())
+            .then(data => {
+                const list = document.getElementById('repoList');
+                list.innerHTML = '';
+                data.forEach((repo, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'card';
+                    div.style.animationDelay = `${index * 0.1}s`;
+                    div.innerHTML = `
+                        <div style="display:flex; justify-content:space-between; align-items:start; margin-bottom: 1.5rem;">
+                            <i class="ph ph-git-repository" style="font-size: 2.5rem; color: #24292e;"></i>
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary); border: 2px solid var(--primary); padding: 4px 12px; border-radius: 20px;">${repo.language || 'Code'}</span>
+                        </div>
+                        <h3>${repo.name}</h3>
+                        <p>${repo.description || 'Public repository for marketing projects and development.'}</p>
+                        <a href="${repo.html_url}" target="_blank" class="btn btn-outline btn-full" style="border-color: #24292e; color: #24292e;">
+                            <i class="ph ph-arrow-square-out"></i>
+                            View Repository
+                        </a>
+                    `;
+                    list.appendChild(div);
+                });
+            })
+            .catch(err => {
+                document.getElementById('repoList').innerHTML = '<div class="card" style="grid-column: 1/-1; text-align: center;"><p style="color: var(--text-dim);">Unable to load repositories at this time. Please check back later.</p></div>';
+            });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.get
